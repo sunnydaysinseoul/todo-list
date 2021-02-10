@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunnnnny To-do</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Song Myung", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap1">
+      <!-- 날씨 -->
+      <span class="js-weather weather"></span>
+      <!-- 시계 -->
+      <div class="js-clock clock">
+        <div class="cl-time">시간</div>
+        <div class="cl-date">날짜</div>
+      </div>
+
+      <!-- 이름-greetings -->
+      <form class="js-form form">
+        <input class="nameInput" type="text" placeholder="이름을 알려주세요!" />
+      </form>
+      <!-- form을 쓰는 이유 : enter헀을 때 submit할 수 있음 -->
+      <h4 class="js-greetings greetings"></h4>
+    </div>
+
+
+      <!-- to do list -->
+      <div class="toDoBox">
+        <form class="js-todoForm">
+          <input
+            class="toDoInput"
+            type="text"
+            placeholder="오늘의 할일"
+          />
+        </form>
+        <ul class="js-todoList todoList">
+          <!-- todo.js - paintToDo()를 통해 <li id='1'></li> 를 넣어줄 자리. -->
+        </ul>
+      </div>
+
+
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="background.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
