@@ -26,9 +26,10 @@ function deleteToDo(event) {
 
 function deleteDone(event) {
   const li = event.target.parentNode;
+  // console.log(li)
   toDoDone.removeChild(li);
   const cleanToDos = doneToDos.filter(function filterFn(toDo) {
-    return toDo.id !== parseInt(li.id);
+    return toDo.id !== parseInt(li.id); 
   });
   doneToDos = cleanToDos; //지우고 남은 새로운 list저장
   saveDones();
@@ -37,6 +38,7 @@ function deleteDone(event) {
 
 function getDones() {
   const li = event.target.parentNode; //event.target으로 클릭한 button의 상위노드<li>를 가져오기
+  console.log(li)
   text = li.querySelector("span").innerHTML;//가져온 <li>내의 span 값 가져오기(=투두 내용 text)
   paintDones(text);
 }
@@ -49,7 +51,7 @@ function paintDones(text){
   delBtn.className = "delBtnCN";
   const checkBtn = document.createElement("button");
   checkBtn.className = "checkBtnCN";
-  const newId = toDos.length + 1; //li마다 id를 가질것임!
+  const newId = doneToDos.length + 1; //li마다 id를 가질것임!
   const span = document.createElement("span");
   span.innerText = text; //handleSubmit()에서 받아온 text값을 span안에 넣기.
   delBtn.innerHTML = "✖"; //button의 모양 바꾸기
