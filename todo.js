@@ -144,7 +144,7 @@ function loadDones(){
         const parsedDones = JSON.parse(loadedDones);
         console.log(parsedDones)
         parsedDones.forEach(function(item){
-            paintDones(item.text.text)
+            paintDones(item.text)
         });
         // console.log(parsedDones)
     }
