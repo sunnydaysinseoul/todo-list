@@ -39,22 +39,25 @@
       <h4 class="js-greetings greetings"></h4>
     </div>
 
-
+    <div class="box-container">
       <!-- to do list -->
       <div class="toDoBox">
         <form class="js-todoForm">
-          <input
-            class="toDoInput"
-            type="text"
-            placeholder="오늘의 할일"
-          />
+          <input class="toDoInput" type="text" placeholder="할 일을 입력해주세요" />
         </form>
         <ul class="js-todoList todoList">
           <!-- todo.js - paintToDo()를 통해 <li id='1'></li> 를 넣어줄 자리. -->
         </ul>
       </div>
 
-
+      <!-- checked to do -->
+      <div class="toDoDone">
+        <a>완료한 할 일</a>
+        <ul class="js-toDoDone todoList">
+          <!-- todo.js - moveToDos()를 통해  <li id='1'></li> 를 넣어줄 자리. -->
+        </ul>
+      </div>
+    </div>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>

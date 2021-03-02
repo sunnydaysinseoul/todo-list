@@ -35,6 +35,19 @@ body {
   margin-top: 50px;
 }
 
+::webkit-scrollbar{
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+  
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(218, 218, 218);
+}
 
 .clock {
   color: #ffffff;
@@ -63,23 +76,57 @@ body {
   border-radius: 10px 0 10px 0;
 }
 
+.box-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; /*화면 크기에 맞추어 아이템 줄바꿈*/
+}
+
 .toDoBox {
-  width:300px;
-  margin : 0 auto;
+  width:40%;
+  height: 350px;
+  margin : 20px auto;
   background-color: #ffffff;
   padding: 40px 30px 20px 30px;
   border-radius: 20px;
-  box-shadow: #555555 3px 10px 10px; ;
+  box-shadow: #555555 3px 10px 10px;
+  overflow: auto;
+}
+
+
+.toDoDone{
+  width:40%;
+  height: 350px;
+  margin : 20px auto;
+  padding : 20px;
+  background-color: #ffffff;
+  padding: 40px 30px 20px 30px;
+  border-radius: 20px;
+  box-shadow: #555555 3px 10px 10px;
+  overflow: auto;
+}
+
+
+@media screen and (max-width: 800px) {
+  .toDoBox {
+      width:70%;
+  }
+  .toDoDone{
+    width: 70%;
+  }
 }
 
 .toDoInput{
   height:30px;
   width:200px;
   font-size: 18px;
-  border: 1px solid #dadada;;
+  border: 1px solid #ffffff;
   border-radius: 10px 0 10px 0;
   color:#000000;
-  box-shadow: #555555 1px 10px 10px;
+  position:relative;
+  
+  /* box-shadow: #555555 1px 10px 10px; */
 }
 
 .toDoInput::placeholder{
@@ -102,6 +149,18 @@ body {
   text-align: left;
 }
 
+.toDoDoneLi{
+  font-size:18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.toDoDone > a{
+  height:30px;
+  width:200px;
+  text-decoration: underline;
+}
+
 .delBtnCN{
   background-color: #ffffff;
   border-radius: 10px 0 10px 0;
@@ -112,17 +171,33 @@ body {
 }
 
 .delBtnCN:hover{
-  background-color: #ffa1c8;
+  background-color: #7a7a7a;
+  color:#ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkBtnCN{
+  background-color: #ffffff;
+  border-radius: 10px 0 10px 0;
+  font-size: 15px;
+  border : none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.checkBtnCN:hover{
+  color:red;
+  font-weight: bold;
   transition: all 0.2s ease-in-out;
 }
 
 .weather {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color:  #ffffff;
   position: absolute;
-  bottom: 10px;
+  top: 10px;
   right: 10px;
-  text-shadow: #ff9e9e 2px 2px 2px;
+  text-shadow: #424242 2px 2px 2px;
 }
 
