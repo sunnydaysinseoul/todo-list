@@ -9,7 +9,7 @@ function getTime(){
     const seconds = date.getSeconds();
     clockTitle.innerHTML = `${hours < 10 ? `0${hours}` : hours}: ${minutes < 10 ? `0${minutes}` : minutes}: ${seconds < 10 ? `0${seconds}` : seconds}`;
                             //Tenary Operator. or, mini If.
-                            //`${if hours가 10보다 작으면? `이렇게출력` : else hours}`
+                            //`${if hours가 10보다 작으면? `이렇게출력` : else hours}` ->03시 03분 03초이렇게 두자리씩 형태로 맞추기.
 
 }
 
